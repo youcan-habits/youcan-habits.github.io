@@ -1,4 +1,4 @@
-const CACHE="youcan-standalone-d5c25746ca97", SCOPE="/", URLS=["/aer-breath-icon.png","/analytics-config.json","/app-icon.png","/apple-touch-icon.png","/assets/index-BaFYkqdM-794f7ea123.js","/assets/index-Csfoh9vP-794f7ea123.css","/favicon.png","/icon-192.png","/icon-512.png","/index.html","/site.webmanifest"];
+const CACHE="youcan-standalone-28f303a984c7", SCOPE="/", URLS=["/aer-breath-icon.png","/analytics-config.json","/app-icon.png","/apple-touch-icon.png","/assets/index-BYkO5BPL-c6a70fb562.js","/assets/index-Csfoh9vP-c6a70fb562.css","/favicon.png","/icon-192.png","/icon-512.png","/index.html","/site.webmanifest"];
 self.addEventListener('install', event => { event.waitUntil(caches.open(CACHE).then(c => c.addAll(URLS))); });
 self.addEventListener('activate', event => { event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(k => k.startsWith('youcan-standalone-') && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', event => {
